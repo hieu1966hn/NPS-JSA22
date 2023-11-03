@@ -5,7 +5,6 @@
 //   i = i + 1; /// i++; i tăng 1 đơn vị sau mỗi lần lặp.
 // }
 
-
 ///// Ví dụ với do while
 // let i = 1;
 // do {
