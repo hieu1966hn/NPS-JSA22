@@ -72,6 +72,7 @@
 /* Lower Navbar */
 .lower-navbar {
   border-top: 1px solid rgba(1, 15, 28, 0.1);
+  display: flex;
 }
 
 .lower-navbar div {
