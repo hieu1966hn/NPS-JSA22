@@ -2,27 +2,32 @@ const categories = [
   {
     id: "headphones",
     name: "Headphones",
-    image: "product-cat-1.png",
+    image: "https://ecommerce-vanillajs-mindx.netlify.app/assets/categories/product-cat-1.png",
+    quantity: "3 product",
   },
   {
     id: "mobile-tablets",
     name: "Mobile Tablets",
-    image: "product-cat-2.png",
+    image: "https://ecommerce-vanillajs-mindx.netlify.app/assets/categories/product-cat-2.png",
+    quantity: "2 product",
   },
   {
     id: "cpu-heat-pipes",
     name: "CPU Heat Pipes",
-    image: "product-cat-3.png",
+    image: "https://ecommerce-vanillajs-mindx.netlify.app/assets/categories/product-cat-3.png",
+    quantity: "2 product",
   },
   {
     id: "smart-watch",
     name: "Smart Watch",
-    image: "product-cat-4.png",
+    image: "https://ecommerce-vanillajs-mindx.netlify.app/assets/categories/product-cat-4.png",
+    quantity: "3 product",
   },
   {
     id: "bluetooth",
     name: "Bluetooth",
-    image: "product-cat-5.png",
+    image: "https://ecommerce-vanillajs-mindx.netlify.app/assets/categories/product-cat-5.png",
+    quantity: "5 product",
   },
 ];
 
@@ -150,3 +155,8 @@ const products = [
 ];
 
 
+///// Lưu trữ categories lên LS
+localStorage.setItem("categories", JSON.stringify(categories));
+
+///// Lưu trữ products lên LS
+localStorage.setItem("products", JSON.stringify(products));

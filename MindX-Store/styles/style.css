@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Style banner */
 .banner {
-  background: #115061;
+  /* background: #115061; */
   position: relative;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -95,4 +95,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 30px;
 }
 
-.heading {}
+#categories {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-card img {
+  width: 160px;
+  height: 160px;
+}
