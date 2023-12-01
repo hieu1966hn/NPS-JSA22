@@ -24,20 +24,56 @@ for (let key of getCategories) {
 }
 
 ////// Render data sản phẩm ra màn hình website
+let star;
 const divProducts = document.getElementById("products");
 for (let key of getProducts) {
+  if (key.stars == 1) {
+    star = `<i class="fa-solid fa-star"></i>`
+  }
+  else if (key.stars == 2) {
+    star = `
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    `
+  }
+  else if (key.stars == 3) {
+    star = `
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    `
+  }
+  else if (key.stars == 4) {
+    star = `
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    `
+  }
+  else {
+    star = `
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    `
+  }
   divProducts.innerHTML += `
         <div class="card">
           <div class="image-container">
-            <img src="${key.image}" alt="">
+            <img src="${"../assets/products/" + key.image}" alt="">
           </div>
           <div class="container">
             <p>${key.category}</p>
             <h5>${key.name}</h5>
-            <div class="stars"></div>
+            <div class="stars">
+            ${star}
+            </div>
             <h6>
-              <span>${key.oldPrice}</span>
-              <span>${key.newPrice}</span>
+              <span class="old-price">${key.oldPrice}</span>
+              <span class="new-price">${key.newPrice}</span>
             </h6>
           </div>
         </div>

@@ -104,3 +104,40 @@ h1, h2, h3, h4, h5, h6 {
   width: 160px;
   height: 160px;
 }
+
+/* Style các products */
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 22%;
+  margin: 15px;
+}
+
+.card .image-container img {
+  width: 235px;
+  height: 235px;
+}
+
+.card .container {
+  padding-top: 10px;
+  border-top: 1px solid rgb(231, 227, 227);
+}
+
+.stars i {
+  color: #f7bc00;
+}
+
+.card .old-price {
+  text-decoration: line-through;
+  font-size: smaller;
+}
+
+.card .new-price {
+  color: rgb(28, 105, 138);
+  font-size: large;
+  font-weight: bold;
+}
