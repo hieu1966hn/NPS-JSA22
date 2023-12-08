@@ -61,10 +61,57 @@ function displayCart() {
                   </td>
                 </tr>
                 `
-    )
+    ).join("")
 
       }
         </table>
+
+        <div>
+          <div class="coupon-code">
+            <p>Coupon Code: </p>
+            <div>
+              <form>
+                <input type="text" placeholder="Enter Coupon Code" />
+                <button>Apply</button>
+              </form>
+              <button onclick="local.Storage.removeItem('cart'); displayCart();">Clear Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-wrapper">
+        <div class="checkout-top">
+          <span>Subtotal</span>
+          <span id="subtotal">$${subTotal}</span>
+        </div>
+
+        <div class="checkout-shipping">
+          <h4>Shipping</h4>
+          <div>
+            <input type="radio" id="flat_rate" name="shipping" ${extraFee === 20 ? "checked" : ''} />
+            <label for="flat_rate">Flat rate: <span>$20.00</span></label>
+          </div>
+
+          <div>
+            <input type="radio" id="local_pickup" name="shipping" ${extraFee === 25 ? "checked" : ''} />
+            <label for="local_pickup">Flat rate: <span>$25.00</span></label>
+          </div>
+
+          <div>
+            <input type="radio" id="free_shipping" name="shipping" ${extraFee === 0 ? "checked" : ''} />
+            <label for="free_shipping">Free shipping</label>
+          </div>
+        </div>
+
+        <div class="checkout-total"> 
+          <span>Total</span><span>$${subTotal + extraFee}</span>
+        </div>
+
+        <div class="checkout-proceed">
+          <a href="" onclick="alert('Purchased successfully'); localStorage.removeItem('cart'); displayCart();">
+          Proceed to Checkout</a>
+        </div>
       </div>
     </div>
     `
