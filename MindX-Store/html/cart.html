@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+
+  <!-- Nhúng fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/navbar.css">
+  <link rel="stylesheet" href="../styles/cart.css">
+</head>
+
+<body>
+
+  <!-- Lập trình navbar -->
+  <div class="navbar">
+    <div class="upper-navbar">
+      <a href="./index.html">
+        <h1>Mind<span>X</span> Store</h1>
+      </a>
+      <form class="search" method="get" action="./search.html">
+        <input type="text" placeholder="Search for product ..." name="q" />
+        <button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="icons">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-regular fa-heart"></i>
+
+      </div>
+    </div>
+
+    <!-- Phần navbar bên dưới -->
+    <div class="lower-navbar" onclick="event.stopPropagation()">
+      <div class="header">
+
+      </div>
+
+      <div>
+        <div class="all-categories" tabindex="0">
+          <div>
+            <span>
+              <i class="fa-solid fa-align-left"></i>
+              <span>All Categories</span>
+            </span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="category-drops"></div>
+        </div>
+        <div class="drop" tabindex="0">
+          <a href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="list">
+            <a class="list-child" href="#">Electronic</a>
+            <a class="list-child" href="#">Fashion</a>
+            <a class="list-child" href="#">Beauty</a>
+          </div>
+        </div>
+
+        <div class="drop" tabindex="0">
+          <a href="#">Shop <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="list">
+            <a class="list-child" href="#">Shop pages</a>
+            <a class="list-child" href="#">Features</a>
+            <a class="list-child" href="#">Hover style</a>
+          </div>
+        </div>
+
+        <div class="drop" tabindex="0">
+          <a href="#">Products <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="list">
+            <a class="list-child" href="#">Shop pages</a>
+            <a class="list-child" href="#">Categories</a>
+            <a class="list-child" href="#">Shopping Cart</a>
+            <a class="list-child" href="#">Wishlist</a>
+            <a class="list-child" href="#">Wish Video</a>
+          </div>
+        </div>
+
+        <div class="drop" tabindex="0">
+          <a href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="list">
+            <a class="list-child" href="#">Blog Sandard</a>
+            <a class="list-child" href="#">Blog Grid</a>
+          </div>
+        </div>
+
+        <div class="hide"><a href="./contact.html">Contact</a></div>
+      </div>
+
+      <div class="contact">
+        <i class="fa-solid fa-phone" style="color: var(--primary);"></i>
+        <div>
+          <p>Hotline:</p>
+          <p>+123 456 789</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cart-container">
+
+  </div>
+
+
+  <!-- Footer -->
+
+  <script src="../scripts/data.js"></script>
+  <script src="../scripts/cart.js"></script>
+
+</body>
+
+</html>
