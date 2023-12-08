@@ -23,14 +23,53 @@ function displayCart() {
     <div>
       <div style="flex:1;">
         <table>
+            <thead>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th></th>
+            </thead>
+            ${cart.map(
+      (product) =>
+        `
+                <tr>
+                  <td>
+                    <div class="product-cell">
+                      <img src ="../assets/products/${product.image}" alt="Not found"/>
+                      <p>${product.name}</p>
+                    </div>
+                  </td>
 
+                  <td>${product.newPrice}</td>
+
+                  <td>
+                    <div class="quantity-cell">
+                      <button onclick="removeFromCart('${product.id}'); displayCart()">
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <span>${product.quantity}</span>
+                      <button onclick="addToCart('${product.id}'); displayCart()">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                  </td>
+
+                  <td>
+                    <button class="remove-from-cart" onclick="removeFromCart('${product.id}', 'all'); displayCart()">
+                      <i class="fa-solid fa-x">Remove</i>
+                    </button>
+                  </td>
+                </tr>
+                `
+    )
+
+      }
         </table>
       </div>
     </div>
     `
   }
 }
-
 
 displayCart();
 
